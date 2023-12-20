@@ -3,6 +3,11 @@ import argparse
 
 def update_files(folder_path, extension, first_name, last_name):
     # Liste tous les fichiers du dossier avec l'extension spécifiée
+    ''' 
+    PRE: extension, first_name et last_name doivent etre des strings
+    POST: insertion sous forme de commentaire de first_name et last_name au début de chaque fichier
+          ayant l'extension donné avec 2 retour à la lignes. 
+    '''
     files = [f for f in os.listdir(folder_path) if f.endswith(extension)]
 
         # Vérifie si des fichiers ont été trouvés

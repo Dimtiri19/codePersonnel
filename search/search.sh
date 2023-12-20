@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Définir le répertoire à parcourir
-repertoire="C:\Users\dimit\OneDrive\Bureau\projetDev\codePersonnel"
+repertoire="c:/Users/dimit/OneDrive/Bureau"
 
 # Tableau associatif pour stocker les extensions des fichiers sans la chaîne de caractères
 declare -A extensions_sans_chaine
