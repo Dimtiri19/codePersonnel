@@ -94,6 +94,19 @@ class TestUpdateFiles(unittest.TestCase):
             expected_content = "John Doe\n\n" + file_content
             self.assertEqual(updated_content, expected_content)
 
+    def test_update_files_unknown_extension(self):
+        # Crée un fichier avec une extension inconnue temporaire
+        file_content = "Hello, world!"
+        file_path = os.path.join(self.test_dir, "test_file.unknown")
+        with open(file_path, "w") as file:
+            file.write(file_content)
+
+        # Exécute la fonction update_files avec une extension inconnue
+        with self.assertRaises(ValueError) as context:
+            update_files(self.test_dir, "unknown", "John", "Doe")
+
+        # Vérifie que l'erreur a été correctement générée
+        self.assertIn("Extension inconnue", str(context.exception))
 
 if __name__ == "__main__":
     unittest.main()

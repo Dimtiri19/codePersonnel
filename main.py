@@ -4,16 +4,15 @@ import argparse
 def update_files(folder_path, extension, first_name, last_name):
     # Liste tous les fichiers du dossier avec l'extension spécifiée
     ''' 
-    PRE: extension, first_name et last_name doivent etre des strings
+    PRE: extension, first_name et last_name doivent être des chaînes de caractères
     POST: insertion sous forme de commentaire de first_name et last_name au début de chaque fichier
-          ayant l'extension donné avec 2 retour à la lignes. 
+          ayant l'extension donnée avec 2 retours à la ligne. 
     '''
     files = [f for f in os.listdir(folder_path) if f.endswith(extension)]
 
-        # Vérifie si des fichiers ont été trouvés
+    # Vérifie si des fichiers ont été trouvés
     if not files:
-        print(f"Aucun fichier avec l'extension '{extension}' trouvé dans le dossier.")
-        exit()
+        raise ValueError(f"Aucun fichier avec l'extension '{extension}' trouvé dans le dossier.")
 
     for file_name in files:
         file_path = os.path.join(folder_path, file_name)
@@ -39,8 +38,7 @@ def update_files(folder_path, extension, first_name, last_name):
             comment1 = ''
             comment2 = ''
         else:
-            print('je ne connais pas encore cette extention')
-            exit()
+            raise ValueError(f"Extension inconnue : '{extension}'")
 
         # Ajoute le nom et le prénom à la première ligne avec un retour à la ligne
         updated_content = f"{comment1}{first_name} {last_name}{comment2}\n\n{content}"
