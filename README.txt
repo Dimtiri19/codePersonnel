@@ -1,8 +1,8 @@
 explication du code:
 
-1.  dans le dossier search exécuter le fichier search.py en faisant attention d'être bien dans le bon répertoire en console
-    lors de l'éxécution du code. search.py va vous demander en console un path et il vous affichera toutes les extention de
-    fichier qui ne possède pas encore "Dimitri Meeus" dedans. Cela valide l'AA PY1-6
+1.  dans le dossier search exécuter le fichier exec.py en faisant attention d'être bien dans le bon répertoire en console
+    lors de l'éxécution du code. exec.py va vous demander en console un path et il vous affichera toutes les extention de
+    fichier qui ne possède pas encore "Dimitri Meeus" dedans et va faire un backup du fichier search.sh avec le dernier path chercher au cas où. Cela valide l'AA PY1-6
 
 2.  le deuxième fichier est main.py qui vous demanderas plusieurs paramètres pour l'exécuter, le path, l'extesion, le prénom 
     et le nom. Il va mettre le nom et prénom sur la première ligne de tous les fichier ayant l'extention donné écris d'une 
