@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Définir le répertoire à parcourir
-repertoire="c:/Users/dimit/OneDrive - EPHEC asbl/2023/dev 2/autoRange"
+repertoire="C:\Users\dimit\OneDrive\Bureau\projetDev\codePersonnel"
 
 # Tableau associatif pour stocker les extensions des fichiers sans la chaîne de caractères
 declare -A extensions_sans_chaine
